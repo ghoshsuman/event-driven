@@ -1,0 +1,35 @@
+\hypertarget{classev_1_1vPortInterface}{}\section{ev\+:\+:v\+Port\+Interface$<$ T $>$ Class Template Reference}
+\label{classev_1_1vPortInterface}\index{ev\+::v\+Port\+Interface$<$ T $>$@{ev\+::v\+Port\+Interface$<$ T $>$}}
+Inheritance diagram for ev\+:\+:v\+Port\+Interface$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classev_1_1vPortInterface}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classev_1_1vPortInterface_a00678ecec3a0ed7f7fd45257e77948a7}{v\+Port\+Interface} ()\hypertarget{classev_1_1vPortInterface_a00678ecec3a0ed7f7fd45257e77948a7}{}\label{classev_1_1vPortInterface_a00678ecec3a0ed7f7fd45257e77948a7}
+
+\begin{DoxyCompactList}\small\item\em instantiate the correct headers for a Bottle \end{DoxyCompactList}\item 
+void \hyperlink{classev_1_1vPortInterface_aacb840f390ac2f41f8149f1b57d84d6a}{set\+Internal\+Data} (const std\+::deque$<$ T $>$ \&q)\hypertarget{classev_1_1vPortInterface_aacb840f390ac2f41f8149f1b57d84d6a}{}\label{classev_1_1vPortInterface_aacb840f390ac2f41f8149f1b57d84d6a}
+
+\begin{DoxyCompactList}\small\item\em send an entire v\+Queue. The queue is encoded and allocated into a single contiguous memory space. Faster than a standard \hyperlink{classev_1_1vBottle}{v\+Bottle}. \end{DoxyCompactList}\item 
+void {\bfseries set\+Read\+Container} (std\+::vector$<$ T $>$ \&q)\hypertarget{classev_1_1vPortInterface_a200a3e8af8a0704f43393137ccc242b0}{}\label{classev_1_1vPortInterface_a200a3e8af8a0704f43393137ccc242b0}
+
+\item 
+virtual bool \hyperlink{classev_1_1vPortInterface_a1ada068fcd3aaec7ef15ecc97d194b09}{read} (yarp\+::os\+::\+Connection\+Reader \&connection)\hypertarget{classev_1_1vPortInterface_a1ada068fcd3aaec7ef15ecc97d194b09}{}\label{classev_1_1vPortInterface_a1ada068fcd3aaec7ef15ecc97d194b09}
+
+\begin{DoxyCompactList}\small\item\em does nothing as this is a write-\/only port. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ T $>$ $\ast$ {\bfseries read\+\_\+q}\hypertarget{classev_1_1vPortInterface_a9ecff2b85e399f4b9d53c41988e178e0}{}\label{classev_1_1vPortInterface_a9ecff2b85e399f4b9d53c41988e178e0}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/aglover/projects/event-\/driven/libraries/include/i\+Cub/eventdriven/v\+Port.\+h\end{DoxyCompactItemize}

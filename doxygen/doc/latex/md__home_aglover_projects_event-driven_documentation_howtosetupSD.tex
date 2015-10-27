@@ -1,0 +1,197 @@
+\subsection*{Set-\/up icub user}
+
+(as root)
+
+\begin{quote}
+groups icub \end{quote}
+
+
+\begin{quote}
+visudo \end{quote}
+
+
+
+\begin{DoxyItemize}
+\item add line\+: \char`\"{}icub A\+L\+L=(\+A\+L\+L\+:\+A\+L\+L) A\+L\+L\char`\"{}
+\end{DoxyItemize}
+
+\begin{quote}
+mkdir /usr/local/src/robot \end{quote}
+
+
+\begin{quote}
+chown icub /usr/local/src/robot \end{quote}
+
+
+\subsection*{Set up repositories}
+
+(as icub)
+
+\begin{quote}
+mkdir /usr/local/src/robot/icub-\/contrib-\/install \end{quote}
+
+
+\begin{quote}
+vim $\sim$/.bashrc \end{quote}
+
+
+add lines\+:
+
+
+\begin{DoxyItemize}
+\item export R\+O\+B\+O\+T\+\_\+\+C\+O\+DE=/usr/local/src/robot
+\item export Y\+A\+R\+P\+\_\+\+D\+IR=\$\+R\+O\+B\+O\+T\+\_\+\+C\+O\+DE/yarp/build
+\item export I\+C\+U\+Bcontrib\+\_\+\+D\+IR=\$\+R\+O\+B\+O\+T\+\_\+\+C\+O\+DE/icub-\/contrib-\/install
+\item export Y\+A\+R\+P\+\_\+\+D\+A\+T\+A\+\_\+\+D\+I\+RS=\$\+Y\+A\+R\+P\+\_\+\+D\+IR/share/yarp\+:\$\+I\+C\+U\+Bcontrib\+\_\+\+D\+IR/share/\+I\+C\+U\+Bcontrib
+\item export P\+A\+TH=\$\+Y\+A\+R\+P\+\_\+\+D\+IR/bin\+:\$\+I\+C\+U\+Bcontrib\+\_\+\+D\+IR/bin\+:\$\+P\+A\+TH
+\item export E\+D\+\_\+\+R\+O\+OT=\$\+R\+O\+B\+O\+T\+\_\+\+C\+O\+DE/event-\/driven
+\end{DoxyItemize}
+
+\subsubsection*{Set up Y\+A\+RP}
+
+\begin{quote}
+cd /usr/local/src/robot \end{quote}
+
+
+\begin{quote}
+git clone \href{https://github.com/robotology/yarp}{\tt https\+://github.\+com/robotology/yarp} \end{quote}
+
+
+\begin{quote}
+cd yarp \end{quote}
+
+
+\begin{quote}
+mkdir build \end{quote}
+
+
+\begin{quote}
+cd build \end{quote}
+
+
+\begin{quote}
+ccmake ../ \end{quote}
+
+
+
+\begin{DoxyItemize}
+\item set C\+R\+E\+A\+T\+E\+\_\+\+G\+U\+IS = O\+FF
+\end{DoxyItemize}
+
+\begin{quote}
+make (not install) \end{quote}
+
+
+\subsubsection*{Set up install directory as \$\+I\+C\+U\+Bcontrib\+\_\+\+D\+IR}
+
+\begin{quote}
+cd /usr/local/src/robot \end{quote}
+
+
+\begin{quote}
+git clone \href{https://github.com/robotology/icub-contrib-common}{\tt https\+://github.\+com/robotology/icub-\/contrib-\/common} \end{quote}
+
+
+\begin{quote}
+cd icub-\/contrib-\/common \end{quote}
+
+
+\begin{quote}
+mkdir build \end{quote}
+
+
+\begin{quote}
+cd build \end{quote}
+
+
+\begin{quote}
+ccmake ../ \end{quote}
+
+
+
+\begin{DoxyItemize}
+\item set C\+M\+A\+K\+E\+\_\+\+I\+N\+S\+T\+A\+L\+L\+\_\+\+D\+IR=\$\+I\+C\+U\+Bcontrib\+\_\+\+D\+IR
+\end{DoxyItemize}
+
+\begin{quote}
+make install \end{quote}
+
+
+\subsubsection*{Set up event-\/driven}
+
+\begin{quote}
+cd /usr/local/src/robot \end{quote}
+
+
+\begin{quote}
+git clone \href{https://github.com/robotology/event-driven}{\tt https\+://github.\+com/robotology/event-\/driven} \end{quote}
+
+
+\begin{quote}
+cd event-\/driven \end{quote}
+
+
+\begin{quote}
+mkdir build \end{quote}
+
+
+\begin{quote}
+cd build \end{quote}
+
+
+\begin{quote}
+ccmake ../ \end{quote}
+
+
+
+\begin{DoxyItemize}
+\item (cmake should have found install directory as \$\+I\+C\+U\+Bcontrib\+\_\+\+D\+IR automatically)
+\end{DoxyItemize}
+
+\begin{quote}
+make install \end{quote}
+
+
+\subsection*{Set up device drivers}
+
+(as icub)
+
+\begin{quote}
+sudo usermod -\/a -\/G i2c icub \end{quote}
+
+
+\begin{quote}
+sudo vim /lib/udev/rules.d/77-\/iit-\/hpu.\+rules \end{quote}
+
+
+add lines\+:
+
+
+\begin{DoxyItemize}
+\item S\+U\+B\+S\+Y\+S\+T\+EM==\char`\"{}iit-\/hpu-\/class\char`\"{}, G\+R\+O\+UP=\char`\"{}i2c\char`\"{}
+\end{DoxyItemize}
+
+\begin{quote}
+sudo vim /etc/rc.local \end{quote}
+
+
+add lines\+:
+
+
+\begin{DoxyItemize}
+\item insmod \$\+P\+A\+T\+H\+\_\+\+T\+O\+\_\+\+H\+P\+U\+\_\+\+D\+R\+I\+V\+E\+R.\+ko ps=4096
+\item \$\+P\+A\+T\+H\+\_\+\+T\+O\+\_\+\+Z\+Y\+N\+Q\+G\+R\+A\+B\+B\+ER --biaswrite $>$ /usr/local/src/robot/zynq\+Grabber.log
+\end{DoxyItemize}
+
+\subsection*{Misc}
+
+check the device driver meta data
+
+\begin{quote}
+udevadm info -\/q all -\/a /dev/iit-\/hpu0 \end{quote}
+
+
+check the device driver parameters
+
+\begin{quote}
+cat /sys/module/iit\+\_\+hpucore\+\_\+dma/parameters/ps\end{quote}

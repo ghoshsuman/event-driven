@@ -1,0 +1,103 @@
+\hypertarget{classev_1_1vGenReadPort}{}\section{ev\+:\+:v\+Gen\+Read\+Port Class Reference}
+\label{classev_1_1vGenReadPort}\index{ev\+::v\+Gen\+Read\+Port@{ev\+::v\+Gen\+Read\+Port}}
+
+
+an asynchronous reading port that accepts v\+Bottles and decodes them  
+
+
+
+
+{\ttfamily \#include $<$v\+Port.\+h$>$}
+
+Inheritance diagram for ev\+:\+:v\+Gen\+Read\+Port\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classev_1_1vGenReadPort}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classev_1_1vGenReadPort_a9391662e85003d3e45c75c13ebbda579}{v\+Gen\+Read\+Port} ()\hypertarget{classev_1_1vGenReadPort_a9391662e85003d3e45c75c13ebbda579}{}\label{classev_1_1vGenReadPort_a9391662e85003d3e45c75c13ebbda579}
+
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+\hyperlink{classev_1_1vGenReadPort_a2c1538e9e2548b7d4620578771868e67}{$\sim$v\+Gen\+Read\+Port} ()\hypertarget{classev_1_1vGenReadPort_a2c1538e9e2548b7d4620578771868e67}{}\label{classev_1_1vGenReadPort_a2c1538e9e2548b7d4620578771868e67}
+
+\begin{DoxyCompactList}\small\item\em desctructor \end{DoxyCompactList}\item 
+bool {\bfseries open} (std\+::string name)\hypertarget{classev_1_1vGenReadPort_a27800667234bf30d87c9abd85b6bd913}{}\label{classev_1_1vGenReadPort_a27800667234bf30d87c9abd85b6bd913}
+
+\item 
+void {\bfseries close} ()\hypertarget{classev_1_1vGenReadPort_a12681e054a8d8381695fed07f8bea926}{}\label{classev_1_1vGenReadPort_a12681e054a8d8381695fed07f8bea926}
+
+\item 
+void {\bfseries run} ()\hypertarget{classev_1_1vGenReadPort_af6ba25ad4d6a451f7dde5c29ab2b0cbd}{}\label{classev_1_1vGenReadPort_af6ba25ad4d6a451f7dde5c29ab2b0cbd}
+
+\item 
+const v\+Queue $\ast$ \hyperlink{classev_1_1vGenReadPort_a08b2c45a6af86e96dd7a0a5e92265250}{read} (yarp\+::os\+::\+Stamp \&yarpstamp)\hypertarget{classev_1_1vGenReadPort_a08b2c45a6af86e96dd7a0a5e92265250}{}\label{classev_1_1vGenReadPort_a08b2c45a6af86e96dd7a0a5e92265250}
+
+\begin{DoxyCompactList}\small\item\em ask for a pointer to the next v\+Queue. Blocks if no data is ready. \end{DoxyCompactList}\item 
+void \hyperlink{classev_1_1vGenReadPort_a4743880e4056af9984dbe4d29b4c9b32}{set\+Q\+Limit} (unsigned int number\+\_\+of\+\_\+qs)\hypertarget{classev_1_1vGenReadPort_a4743880e4056af9984dbe4d29b4c9b32}{}\label{classev_1_1vGenReadPort_a4743880e4056af9984dbe4d29b4c9b32}
+
+\begin{DoxyCompactList}\small\item\em set the maximum number of qs that can be stored in the buffer. A value of 0 keeps all qs. \end{DoxyCompactList}\item 
+void \hyperlink{classev_1_1vGenReadPort_a12f98a9e1cfa96af27dd3b5f5797a93b}{release\+Data\+Lock} ()\hypertarget{classev_1_1vGenReadPort_a12f98a9e1cfa96af27dd3b5f5797a93b}{}\label{classev_1_1vGenReadPort_a12f98a9e1cfa96af27dd3b5f5797a93b}
+
+\begin{DoxyCompactList}\small\item\em un\+Blocks the blocking call in get\+NextQ. Useful to ensure a graceful shutdown. No guarantee the return of get\+NextQ will be valid. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classev_1_1vGenReadPort_aaba8424bcf3a884e2c731fdd640149f2}{queryunprocessed} ()\hypertarget{classev_1_1vGenReadPort_aaba8424bcf3a884e2c731fdd640149f2}{}\label{classev_1_1vGenReadPort_aaba8424bcf3a884e2c731fdd640149f2}
+
+\begin{DoxyCompactList}\small\item\em ask for the number of v\+Queues currently allocated. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classev_1_1vGenReadPort_a5e83311979ffea1ab0059e493e3354d4}{query\+DelayN} ()\hypertarget{classev_1_1vGenReadPort_a5e83311979ffea1ab0059e493e3354d4}{}\label{classev_1_1vGenReadPort_a5e83311979ffea1ab0059e493e3354d4}
+
+\begin{DoxyCompactList}\small\item\em ask for the number of events in all v\+Queues. \end{DoxyCompactList}\item 
+double \hyperlink{classev_1_1vGenReadPort_a9c7d57b9a846edf5c699758e78120456}{query\+DelayT} ()\hypertarget{classev_1_1vGenReadPort_a9c7d57b9a846edf5c699758e78120456}{}\label{classev_1_1vGenReadPort_a9c7d57b9a846edf5c699758e78120456}
+
+\begin{DoxyCompactList}\small\item\em ask for the total time spanned by all v\+Queues. \end{DoxyCompactList}\item 
+double \hyperlink{classev_1_1vGenReadPort_a45043df88f628713844cce223518bd49}{query\+Rate} ()\hypertarget{classev_1_1vGenReadPort_a45043df88f628713844cce223518bd49}{}\label{classev_1_1vGenReadPort_a45043df88f628713844cce223518bd49}
+
+\begin{DoxyCompactList}\small\item\em ask for the high precision event rate \end{DoxyCompactList}\item 
+std\+::string {\bfseries delay\+Stat\+String} ()\hypertarget{classev_1_1vGenReadPort_a1e5ad389db86c5d6c5807f23ffbd6d7b}{}\label{classev_1_1vGenReadPort_a1e5ad389db86c5d6c5807f23ffbd6d7b}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classev_1_1vGenPortInterface}{v\+Gen\+Port\+Interface} {\bfseries internal\+\_\+storage}\hypertarget{classev_1_1vGenReadPort_a3e4f0b832acb02b24f6886ea3b10a1d3}{}\label{classev_1_1vGenReadPort_a3e4f0b832acb02b24f6886ea3b10a1d3}
+
+\item 
+Port {\bfseries port}\hypertarget{classev_1_1vGenReadPort_a2aeb0d42205bba5fd0fd9ffe83249386}{}\label{classev_1_1vGenReadPort_a2aeb0d42205bba5fd0fd9ffe83249386}
+
+\item 
+std\+::deque$<$ v\+Queue $\ast$ $>$ {\bfseries qq}\hypertarget{classev_1_1vGenReadPort_a204915401b6a23f53ad0cb94b6df0509}{}\label{classev_1_1vGenReadPort_a204915401b6a23f53ad0cb94b6df0509}
+
+\item 
+std\+::deque$<$ yarp\+::os\+::\+Stamp $>$ {\bfseries sq}\hypertarget{classev_1_1vGenReadPort_ab0ad4e5e63bf6f5cdb266d4012355a89}{}\label{classev_1_1vGenReadPort_ab0ad4e5e63bf6f5cdb266d4012355a89}
+
+\item 
+v\+Queue $\ast$ {\bfseries working\+\_\+queue}\hypertarget{classev_1_1vGenReadPort_a2a544b4f8c9218e74f974ea7dea05528}{}\label{classev_1_1vGenReadPort_a2a544b4f8c9218e74f974ea7dea05528}
+
+\item 
+yarp\+::os\+::\+Mutex {\bfseries m}\hypertarget{classev_1_1vGenReadPort_a2dbaf2e6b3d258157b7bcef1542521f3}{}\label{classev_1_1vGenReadPort_a2dbaf2e6b3d258157b7bcef1542521f3}
+
+\item 
+yarp\+::os\+::\+Semaphore {\bfseries dataavailable}\hypertarget{classev_1_1vGenReadPort_a8215c7200a13b75142f17d42df3f30d1}{}\label{classev_1_1vGenReadPort_a8215c7200a13b75142f17d42df3f30d1}
+
+\item 
+unsigned int {\bfseries qlimit}\hypertarget{classev_1_1vGenReadPort_af85246c920ad7e5f8348a3d4169a0197}{}\label{classev_1_1vGenReadPort_af85246c920ad7e5f8348a3d4169a0197}
+
+\item 
+unsigned int {\bfseries delay\+\_\+nv}\hypertarget{classev_1_1vGenReadPort_a3d9c4e036a8ea1e3844689619409f7da}{}\label{classev_1_1vGenReadPort_a3d9c4e036a8ea1e3844689619409f7da}
+
+\item 
+long unsigned int {\bfseries delay\+\_\+t}\hypertarget{classev_1_1vGenReadPort_a7719ea3d0d325cf8d9bbc760a9058133}{}\label{classev_1_1vGenReadPort_a7719ea3d0d325cf8d9bbc760a9058133}
+
+\item 
+double {\bfseries event\+\_\+rate}\hypertarget{classev_1_1vGenReadPort_ac8fceb41f47a76a97ca69deaa9418427}{}\label{classev_1_1vGenReadPort_ac8fceb41f47a76a97ca69deaa9418427}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+an asynchronous reading port that accepts v\+Bottles and decodes them 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/aglover/projects/event-\/driven/libraries/include/i\+Cub/eventdriven/v\+Port.\+h\end{DoxyCompactItemize}

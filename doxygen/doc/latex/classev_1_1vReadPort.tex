@@ -1,0 +1,40 @@
+\hypertarget{classev_1_1vReadPort}{}\section{ev\+:\+:v\+Read\+Port$<$ T $>$ Class Template Reference}
+\label{classev_1_1vReadPort}\index{ev\+::v\+Read\+Port$<$ T $>$@{ev\+::v\+Read\+Port$<$ T $>$}}
+Inheritance diagram for ev\+:\+:v\+Read\+Port$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classev_1_1vReadPort}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classev_1_1vReadPort_a8c559db85d642d2779d2ea02acf75bc9}{v\+Read\+Port} ()\hypertarget{classev_1_1vReadPort_a8c559db85d642d2779d2ea02acf75bc9}{}\label{classev_1_1vReadPort_a8c559db85d642d2779d2ea02acf75bc9}
+
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+\hyperlink{classev_1_1vReadPort_a7ce21badb00708a6914d8620bf17c797}{$\sim$v\+Read\+Port} ()\hypertarget{classev_1_1vReadPort_a7ce21badb00708a6914d8620bf17c797}{}\label{classev_1_1vReadPort_a7ce21badb00708a6914d8620bf17c797}
+
+\begin{DoxyCompactList}\small\item\em desctructor \end{DoxyCompactList}\item 
+void {\bfseries run} ()\hypertarget{classev_1_1vReadPort_a383d2b1d3f896fce2fa352f76fe2fefb}{}\label{classev_1_1vReadPort_a383d2b1d3f896fce2fa352f76fe2fefb}
+
+\item 
+const std\+::vector$<$ T $>$ $\ast$ \hyperlink{classev_1_1vReadPort_a87d37511c497fccae9430f949b381fd1}{read} (yarp\+::os\+::\+Stamp \&yarpstamp)\hypertarget{classev_1_1vReadPort_a87d37511c497fccae9430f949b381fd1}{}\label{classev_1_1vReadPort_a87d37511c497fccae9430f949b381fd1}
+
+\begin{DoxyCompactList}\small\item\em ask for a pointer to the next v\+Queue. Blocks if no data is ready. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classev_1_1vPortInterface}{v\+Port\+Interface}$<$ T $>$ {\bfseries internal\+\_\+storage}\hypertarget{classev_1_1vReadPort_acfb60faa5ca0f9799e9de0e4dc359683}{}\label{classev_1_1vReadPort_acfb60faa5ca0f9799e9de0e4dc359683}
+
+\item 
+std\+::deque$<$ std\+::vector$<$ T $>$ $\ast$ $>$ {\bfseries qq}\hypertarget{classev_1_1vReadPort_a5a6dd26199d1cf9af92f3ec496d21864}{}\label{classev_1_1vReadPort_a5a6dd26199d1cf9af92f3ec496d21864}
+
+\item 
+std\+::vector$<$ T $>$ $\ast$ {\bfseries working\+\_\+queue}\hypertarget{classev_1_1vReadPort_ab2b00ab6bd8a629ac995b039975adb01}{}\label{classev_1_1vReadPort_ab2b00ab6bd8a629ac995b039975adb01}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/aglover/projects/event-\/driven/libraries/include/i\+Cub/eventdriven/v\+Port.\+h\end{DoxyCompactItemize}

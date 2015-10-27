@@ -1,0 +1,73 @@
+\hypertarget{classev_1_1vGenPortInterface}{}\section{ev\+:\+:v\+Gen\+Port\+Interface Class Reference}
+\label{classev_1_1vGenPortInterface}\index{ev\+::v\+Gen\+Port\+Interface@{ev\+::v\+Gen\+Port\+Interface}}
+Inheritance diagram for ev\+:\+:v\+Gen\+Port\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classev_1_1vGenPortInterface}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classev_1_1vGenPortInterface_a502cc1f179d44896d41dd3197e00a231}{v\+Gen\+Port\+Interface} ()\hypertarget{classev_1_1vGenPortInterface_a502cc1f179d44896d41dd3197e00a231}{}\label{classev_1_1vGenPortInterface_a502cc1f179d44896d41dd3197e00a231}
+
+\begin{DoxyCompactList}\small\item\em instantiate the correct headers for a Bottle \end{DoxyCompactList}\item 
+void \hyperlink{classev_1_1vGenPortInterface_aae9fb6578cab8a0c349bffbba6688098}{set\+External\+Data} (const char $\ast$datablock, unsigned int datalength)\hypertarget{classev_1_1vGenPortInterface_aae9fb6578cab8a0c349bffbba6688098}{}\label{classev_1_1vGenPortInterface_aae9fb6578cab8a0c349bffbba6688098}
+
+\begin{DoxyCompactList}\small\item\em for data already allocated in contiguous space. Just send this data on a port without memory reallocation. \end{DoxyCompactList}\item 
+void \hyperlink{classev_1_1vGenPortInterface_a6327ba2e7d14393b6cf2e090cfa60733}{set\+Internal\+Data} (const v\+Queue \&q)\hypertarget{classev_1_1vGenPortInterface_a6327ba2e7d14393b6cf2e090cfa60733}{}\label{classev_1_1vGenPortInterface_a6327ba2e7d14393b6cf2e090cfa60733}
+
+\begin{DoxyCompactList}\small\item\em send an entire v\+Queue. The queue is encoded and allocated into a single contiguous memory space. Faster than a standard \hyperlink{classev_1_1vBottle}{v\+Bottle}. \end{DoxyCompactList}\item 
+void \hyperlink{classev_1_1vGenPortInterface_ab5921d0e859f410dabd029637e9451ac}{set\+Header} (std\+::string eventtype)\hypertarget{classev_1_1vGenPortInterface_ab5921d0e859f410dabd029637e9451ac}{}\label{classev_1_1vGenPortInterface_ab5921d0e859f410dabd029637e9451ac}
+
+\begin{DoxyCompactList}\small\item\em set the type of event that this \hyperlink{classev_1_1vBottleMimic}{v\+Bottle\+Mimic} will send \end{DoxyCompactList}\item 
+void {\bfseries set\+Read\+Container} (v\+Queue \&q)\hypertarget{classev_1_1vGenPortInterface_afb52a2ca736fe9e7b840e4834141cd49}{}\label{classev_1_1vGenPortInterface_afb52a2ca736fe9e7b840e4834141cd49}
+
+\item 
+bool \hyperlink{classev_1_1vGenPortInterface_a2ff6470725bcce8d38ff95e072d5f7bb}{read} (yarp\+::os\+::\+Connection\+Reader \&connection)\hypertarget{classev_1_1vGenPortInterface_a2ff6470725bcce8d38ff95e072d5f7bb}{}\label{classev_1_1vGenPortInterface_a2ff6470725bcce8d38ff95e072d5f7bb}
+
+\begin{DoxyCompactList}\small\item\em does nothing as this is a write-\/only port. \end{DoxyCompactList}\item 
+bool \hyperlink{classev_1_1vGenPortInterface_ae7fa26e89b1f5501aaf1263d9e9f8aa7}{write} (yarp\+::os\+::\+Connection\+Writer \&connection) const \hypertarget{classev_1_1vGenPortInterface_ae7fa26e89b1f5501aaf1263d9e9f8aa7}{}\label{classev_1_1vGenPortInterface_ae7fa26e89b1f5501aaf1263d9e9f8aa7}
+
+\begin{DoxyCompactList}\small\item\em write the data on the connection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::deque$<$ double $>$ {\bfseries meanrat}\hypertarget{classev_1_1vGenPortInterface_abf2f01a37f49d51a0affcfd740dda299}{}\label{classev_1_1vGenPortInterface_abf2f01a37f49d51a0affcfd740dda299}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::int32\+\_\+t $>$ {\bfseries header1}\hypertarget{classev_1_1vGenPortInterface_a52517678289156d670d1895ce1b715fa}{}\label{classev_1_1vGenPortInterface_a52517678289156d670d1895ce1b715fa}
+
+\item 
+std\+::string {\bfseries header2}\hypertarget{classev_1_1vGenPortInterface_a90def45fbbb43d6fd1504107de7acc81}{}\label{classev_1_1vGenPortInterface_a90def45fbbb43d6fd1504107de7acc81}
+
+\item 
+std\+::vector$<$ std\+::int32\+\_\+t $>$ {\bfseries header3}\hypertarget{classev_1_1vGenPortInterface_adf4480a358ddf4b3d8f9dd470f145e95}{}\label{classev_1_1vGenPortInterface_adf4480a358ddf4b3d8f9dd470f145e95}
+
+\item 
+const char $\ast$ {\bfseries datablock}\hypertarget{classev_1_1vGenPortInterface_a94a07df9e3b170643f781de0c8575570}{}\label{classev_1_1vGenPortInterface_a94a07df9e3b170643f781de0c8575570}
+
+\item 
+unsigned int {\bfseries datalength}\hypertarget{classev_1_1vGenPortInterface_a186f02b7b192150a8a1ad3fce98429c6}{}\label{classev_1_1vGenPortInterface_a186f02b7b192150a8a1ad3fce98429c6}
+
+\item 
+std\+::vector$<$ std\+::int32\+\_\+t $>$ {\bfseries internaldata}\hypertarget{classev_1_1vGenPortInterface_a16707752e155ab7fe4a9e00050a15dc0}{}\label{classev_1_1vGenPortInterface_a16707752e155ab7fe4a9e00050a15dc0}
+
+\item 
+v\+Queue $\ast$ {\bfseries read\+\_\+q}\hypertarget{classev_1_1vGenPortInterface_a1326e4dc93f0ee7e84ee4bf844a69608}{}\label{classev_1_1vGenPortInterface_a1326e4dc93f0ee7e84ee4bf844a69608}
+
+\item 
+unsigned int {\bfseries element\+I\+N\+TS}\hypertarget{classev_1_1vGenPortInterface_ac7eb1df18fdcdf6212af6e6c064a10fa}{}\label{classev_1_1vGenPortInterface_ac7eb1df18fdcdf6212af6e6c064a10fa}
+
+\item 
+unsigned int {\bfseries element\+B\+Y\+T\+ES}\hypertarget{classev_1_1vGenPortInterface_ac7509a578807b862a954d9c7928c1090}{}\label{classev_1_1vGenPortInterface_ac7509a578807b862a954d9c7928c1090}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/aglover/projects/event-\/driven/libraries/include/i\+Cub/eventdriven/v\+Port.\+h\end{DoxyCompactItemize}

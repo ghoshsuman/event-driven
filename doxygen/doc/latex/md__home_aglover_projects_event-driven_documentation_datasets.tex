@@ -1,0 +1,31 @@
+Event-\/driven datasets contain the stream of events captured from a single or stereo event cameras. Each dataset can be played using the {\itshape yarpdataplayer}. Once the dataset is loaded in the {\itshape yarpdataplayer} the specified output port (default=/zynq\+Grabber/v\+Bottle\+:o) is opened and can be connected to any event-\/driven processing module, the event-\/driven preprocessing module, or directly to the {\itshape v\+Framer}.
+
+Each datasets may also contain, other sensors on the i\+Cub (also re-\/playable with the {\itshape yarpdataplayer}) and ground truth measurements, given the task (e.\+g. ball locations, corner locations). Also included are Matlab scripts to generate the result figures as in the relevant papers.
+
+Datasets recorded with the D\+VS and A\+T\+IS have the following properties which must be set correctly, in the module parameters and the cmake options, to interpret the data\+: \begin{quote}
+\mbox{[}D\+VS\mbox{]} width=128 height=128 V\+L\+I\+B\+\_\+10\+B\+I\+T\+C\+O\+D\+EC=O\+FF V\+L\+I\+B\+\_\+32\+B\+I\+T\+T\+I\+ME=O\+FF \end{quote}
+
+
+\begin{quote}
+\mbox{[}A\+T\+IS\mbox{]} width=304 height=240 V\+L\+I\+B\+\_\+10\+B\+I\+T\+C\+O\+D\+EC=ON V\+L\+I\+B\+\_\+32\+B\+I\+T\+T\+I\+ME=O\+FF \end{quote}
+
+
+\subsection*{Ball Detection and Tracking}
+
+
+\begin{DoxyItemize}
+\item 2 Datasets = hand-\/move, eye-\/move
+\item D\+VS
+\item ground truth supplied
+\end{DoxyItemize}
+
+\subsection*{Corner Detection}
+
+
+\begin{DoxyItemize}
+\item 2 Datasets = checkboard (multiple different speeds and angles), naturalscene
+\item D\+VS
+\item ground truth supplied for naturalscene
+\end{DoxyItemize}
+
+\subsection*{\href{https://figshare.com/s/0abd8f18312bec15b121}{\tt download}}
